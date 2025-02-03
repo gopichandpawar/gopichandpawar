@@ -1,5 +1,6 @@
 ## Hi there 👋
 this is my first git repository
+I am learning github
 
 <!--
 **gopichandpawar/gopichandpawar** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
