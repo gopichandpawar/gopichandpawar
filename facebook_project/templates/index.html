@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook - Home</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome {{ username }}!</h1>
+        <form action="/create_post" method="POST">
+            <textarea name="content" placeholder="What's on your mind?" required></textarea>
+            <button type="submit">Post</button>
+        </form>
+        <div class="posts">
+            {% for post in posts %}
+                <div class="post">
+                    <strong>{{ post.username }}:</strong>
+                    <p>{{ post.content }}</p>
+                </div>
+            {% endfor %}
+        </div>
+        <a href="/logout">Logout</a>
+    </div>
+</body>
+</html>
