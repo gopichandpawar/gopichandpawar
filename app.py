@@ -32,3 +32,7 @@ async def calculate(data: CalculationRequest):
         return {"error": f"Invalid operator: {operator}"}
     
     return {"result": result}
+print("wello world")
+
+if __name__ == "__main__":
+    app.run(debug=True)
