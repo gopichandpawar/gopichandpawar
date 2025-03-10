@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        .container { display: flex; flex-direction: column; align-items: center; }
+        .result { width: 100%; height: 40px; text-align: right; padding: 10px; font-size: 20px; }
+        .buttons { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
+        button { padding: 20px; font-size: 20px; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <input type="text" id="result" class="result" disabled/>
+        <div class="buttons">
+            <button onclick="addToResult('7')">7</button>
+            <button onclick="addToResult('8')">8</button>
+            <button onclick="addToResult('9')">9</button>
+            <button onclick="addToResult('/')">/</button>
+            <button onclick="addToResult('4')">4</button>
+            <button onclick="addToResult('5')">5</button>
+            <button onclick="addToResult('6')">6</button>
+            <button onclick="addToResult('*')">*</button>
+            <button onclick="addToResult('1')">1</button>
+            <button onclick="addToResult('2')">2</button>
+            <button onclick="addToResult('3')">3</button>
+            <button onclick="addToResult('-')">-</button>
+            <button onclick="addToResult('0')">0</button>
+            <button onclick="clearResult()">C</button>
+            <button onclick="addToResult('.')">.</button>
+            <button onclick="addToResult('+')">+</button>
+            <button onclick="calculateResult()">=</button>
+        </div>
+    </div>
+    <script>
+        let expression = '';
+        function addToResult(value) {
+            expression += value;
+            document.getElementById('result').value = expression;
+        }
+        function clearResult() {
+            expression = '';
+            document.getElementById('result').value = expression;
+        }
+        function calculateResult() {
+            fetch('/calculate?expression=' + encodeURIComponent(expression))
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('result').value = data.result;
+                });
+        }
+    </script>
+</body>
+</html>
