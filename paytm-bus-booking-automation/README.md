@@ -1,0 +1,2 @@
+This automation script demonstrates a complete end-to-end workflow of booking a bus ticket on Paytm using Selenium.
+It is mainly created for learning, practicing web automation, and showcasing Selenium skills for portfolio or interview purposes.
