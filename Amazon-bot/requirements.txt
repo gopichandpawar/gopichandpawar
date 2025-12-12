@@ -1,0 +1,30 @@
+# ------------------------------
+# Project: Amazon Automation Bot
+# Purpose: Automate Amazon purchase flow using Selenium
+# This file lists all Python packages required for the project.
+# ------------------------------
+
+# Selenium: Controls the browser
+selenium==4.21.0
+
+# WebDriver Manager: Auto-downloads the correct ChromeDriver
+webdriver-manager==4.0.1
+
+# Requests: Useful if you later want API calls (optional)
+requests==2.32.3
+
+# Python Dotenv: To store your passwords, OTP, or secret variables safely
+python-dotenv==1.0.1
+
+# PyTest: For testing automation scripts (optional)
+pytest==8.2.0
+
+# Logging package (optional, Python has built-in logging)
+loguru==0.7.2
+
+# If you want to export data to Excel
+pandas==2.2.2
+openpyxl==3.1.3
+
+# If you use virtual environment, this file helps pip install dependencies:
+# Run: pip install -r requirements.txt
