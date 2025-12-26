@@ -1,0 +1,21 @@
+Goibibo Bus Booking Automation - Execution Log
+
+Date: 26-Dec-2025
+Browser: Chrome
+Test Script: bus_booking.py
+
+----------------------------------------
+STATUS: PASS
+----------------------------------------
+
+Steps Executed:
+- Opened Goibibo bus booking page
+- Selected source city: Pune
+- Selected destination city: Yavatmal
+- Searched for available buses
+- Selected seat and pickup point
+- Entered passenger details
+- Proceeded to payment
+- Selected UPI payment and QR option
+
+Execution completed successfully.
