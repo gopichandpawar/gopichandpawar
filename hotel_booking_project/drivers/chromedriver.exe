@@ -1,0 +1,1 @@
+chromedriver.exe is the driver used by Selenium to control the Google Chrome browser. It acts as a bridge between my Python automation script and the browser while executing the hotel booking test on Booking.com.
